@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+}
+.chart-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50vh;
+}
+.chartItem{
+    width:50px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+}
+.chartNumber{
+    align-self: flex-end;
+    position: relative;
+    top: 50px;
+}
+
+.sort-button{
+    display: flex;
+    position: relative;
+    top: 65px;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes increaseOrder {
+    0%{
+        transform: translateX(-15px);
+    }
+    50%{
+        opacity: 0.05;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes decreaseOrder {
+    0%{
+        transform: translateX(15px);
+    }
+    50%{
+        opacity: 0.05;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.iOrder{
+    animation: increaseOrder 1s linear;
+}
+.dOrder{
+    animation: decreaseOrder 1s linear;
+}
+@keyframes highligh{
+   0%{
+    opacity: 1;
+   }
+   50%{
+    opacity: 0;
+   }
+   100%{
+    opacity: 1;
+   }
+}
+.highlightChart{
+    animation: highligh 2s linear;
+}
+.active.current:hover{
+    cursor: default;
+}
+/*
+.c2{
+    animation: decreaseOrder 1.5s linear infinite ;
+}
+.c1{
+    animation: increaseOrder 1.5s linear infinite;
+}*/
